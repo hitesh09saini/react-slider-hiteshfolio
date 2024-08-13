@@ -2,12 +2,13 @@
 import * as React from 'react'
 
 type PropsType = {
-    children: React.ReactNode
+    children: React.ReactNode,
+    onClick: any
 }
 
-const Button = ({ children }: PropsType) => {
+const Button = ({ children, onClick }: PropsType) => {
     return (
-        <div style={{
+        <div onClick={onClick} style={{
             backgroundColor: 'blue',
             color: 'white',
             padding: '10px',
